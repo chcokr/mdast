@@ -20,6 +20,7 @@
     "camelcase": "^1.0.0",
     "ccount": "^1.0.0",
     "chalk": "^1.0.0",
+    "charm": "^1.0.0",
     "chokidar": "^1.0.5",
     "collapse-white-space": "^1.0.0",
     "commander": "^2.0.0",
