@@ -97,7 +97,7 @@ COMMAND LINE USAGE for more information.
 ### `-e`, `--ext` <_extensions_>
 
 ```sh
-mdast --ext .doc
+mdast --ext doc
 ```
 
 Specify one or more extensions to include when searching for files.
@@ -105,6 +105,27 @@ This will add the given `extensions` to the internal list, which includes
 `'md'`, `'markdown'`, `'mkd'`, `'mkdn'`, `'mkdown'`, and `'ron'`.
 
 The given `extensions` can be comma or semi-colon separated.
+
+### `-w`, `--watch`
+
+```sh
+mdast -w .
+```
+
+Watch all files and reprocess when they change.
+
+When watching files which would normally regenerate,
+this behavior is ignored until the watch is closed.
+
+```sh
+$ mdast --no-rc readme.md -oqw
+# Watching... (press CTRL+C to exit)
+# Warning: mdast does not overwrite watched files until exit.
+# Messages and other files are not affected.
+```
+
+The watch is stopped when `SIGINT` is received (usually done by pressing
+`CTRL-C`).
 
 ### `-a`, `--ast`
 
